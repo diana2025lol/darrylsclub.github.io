@@ -14,18 +14,21 @@
 <!-- Mobile Top Buttons -->
 <div id="mobile-buttons">
   <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('qna')">Q&A</button>
   <button onclick="showSection('staff')">Staff</button>
-  <button onclick="showSection('rules')">Q&A</button>
 </div>
 
 <!-- Desktop Sidebar -->
 <aside id="sidebar">
-  <div class="logo-section"><h2>Darryl’s Club</h2></div>
+  <div class="logo-section">
+    <img src="https://stickpng.com/assets/images/580b57fcd9996e24bc43c4f2.png" alt="Darryl’s Club Logo" id="header-img">
+    <h2>Darryl’s Club</h2>
+  </div>
   <nav>
     <ul>
       <li onclick="showSection('home')">🏠 Home</li>
       <li onclick="showSection('qna')">❓ Q&A</li>
-      <li onclick="showSection('staff')">🛡️ Staff</li>
+      <li onclick="showSection('staff')">🛡️ Staff List</li>
       <li onclick="showSection('discord')">🔗 Discord</li>
       <li onclick="showSection('nulls')">🟦 Null’s Club</li>
       <li onclick="showSection('verification')">🔒 Verification</li>
@@ -35,13 +38,13 @@
   <div class="version">v1.2.0</div>
 </aside>
 
-<!-- Main Content -->
 <main id="content">
 
   <!-- Home -->
   <section id="home" class="active-section">
     <h1>Welcome to Darryl’s Club</h1>
-    <p>The official information hub for the community. Use the menu to navigate.</p>
+    <p>Darryl’s Club is the official hub for our community. Here, you can find all information about staff, Q&A, verification, and official partner links. Use the sidebar (desktop) or buttons above (mobile) to navigate.</p>
+    <p>Explore, read the rules, meet the staff team, and join our Discord server to become part of the community.</p>
   </section>
 
   <!-- Q&A -->
@@ -49,77 +52,112 @@
     <h2>❓ Q&A</h2>
     <div class="qa">
       <strong>How to become staff?</strong>
-      <p>Engage with the community, be active and trustworthy, then contact Higher Staff.</p>
+      <p>Engage positively, follow all rules, and be active in the server. Contact Higher Staff when ready to apply.</p>
     </div>
     <div class="qa">
       <strong>What happens if I break a rule?</strong>
-      <p>Warnings, timeouts, or bans depending on severity.</p>
+      <p>Rule violations result in warnings, timeouts, or bans, depending on severity.</p>
     </div>
     <div class="qa">
       <strong>Can I appeal a ban?</strong>
-      <p>Contact Mr.Black or any staff member you are connected with.</p>
+      <p>Contact Mr.Black or any Higher Staff member you’re connected with. Appeals are reviewed fairly.</p>
+    </div>
+    <div class="qa">
+      <strong>How do I verify my account?</strong>
+      <p>Use the Verification section to submit your information to staff for approval.</p>
     </div>
   </section>
 
   <!-- Staff -->
   <section id="staff">
     <h2>🛡️ Server Staff</h2>
+    <p>All staff are listed below. Click “View Responsibilities” to see their detailed duties.</p>
 
     <h3>👑 Higher Staff</h3>
     <div class="staff-card">
-      <h4>Mr.Black <span class="role">Owner</span></h4>
-      <p>Discord: @mr.black78</p>
-      <p>Server founder, top authority, decision-maker.</p>
+      <h3>Mr.Black <span class="role-owner">(Owner)</span></h3>
+      <button onclick="toggleDropdown(this)">View Responsibilities</button>
+      <div class="dropdown-content">
+        <p>Discord: @mr.black78</p>
+        <p>Oversees server operations, makes major decisions, manages staff coordination.</p>
+      </div>
     </div>
     <div class="staff-card">
-      <h4>Ace <span class="role">Overseer</span></h4>
-      <p>Discord: @aceyywithay</p>
-      <p>Supervises staff operations, handles escalations.</p>
+      <h3>Ace <span class="role-overseer">(Overseer)</span></h3>
+      <button onclick="toggleDropdown(this)">View Responsibilities</button>
+      <div class="dropdown-content">
+        <p>Discord: @aceyywithay</p>
+        <p>Supervises staff, handles escalations, ensures rules are enforced fairly.</p>
+      </div>
     </div>
 
     <h3>🔧 Lower Staff</h3>
     <div class="staff-card">
-      <h4>Jayden <span class="role">Moderator</span></h4>
-      <p>Discord: @aian_jj</p>
-      <p>Enforces rules, manages reports, assists members.</p>
+      <h3>Jayden <span class="role-moderator">(Moderator)</span></h3>
+      <button onclick="toggleDropdown(this)">View Responsibilities</button>
+      <div class="dropdown-content">
+        <p>Discord: @aian_jj</p>
+        <p>Enforces rules, manages reports, assists members.</p>
+      </div>
     </div>
     <div class="staff-card">
-      <h4>Xye <span class="role">Trial Moderator</span></h4>
-      <p>Discord: @xyeistiredfromthis</p>
-      <p>Moderator in training, supervised evaluation period.</p>
+      <h3>Xye <span class="role-trial">(Trial Moderator)</span></h3>
+      <button onclick="toggleDropdown(this)">View Responsibilities</button>
+      <div class="dropdown-content">
+        <p>Discord: @xyeistiredfromthis</p>
+        <p>Trial moderator undergoing supervised training.</p>
+      </div>
     </div>
     <div class="staff-card">
-      <h4>Mark <span class="role">Rule Enforcer</span></h4>
-      <p>Discord: @markymark2810</p>
-      <p>Ensures compliance, monitors activity.</p>
+      <h3>Mark <span class="role-enforcer">(Rule Enforcer)</span></h3>
+      <button onclick="toggleDropdown(this)">View Responsibilities</button>
+      <div class="dropdown-content">
+        <p>Discord: @markymark2810</p>
+        <p>Monitors compliance and activity, ensures rules are followed.</p>
+      </div>
     </div>
     <div class="staff-card">
-      <h4>Kal <span class="role">Integration Liaison</span></h4>
-      <p>Discord: @chollima216</p>
-      <p>Handles bot features and integration support.</p>
+      <h3>Kal <span class="role-integration">(Integration Liaison)</span></h3>
+      <button onclick="toggleDropdown(this)">View Responsibilities</button>
+      <div class="dropdown-content">
+        <p>Discord: @chollima216</p>
+        <p>Handles bot features, integrations, and technical support.</p>
+      </div>
     </div>
 
     <h3>🕊️ Retired Staff</h3>
-    <p>@ilovetoast78 (Overseer), @ddiana.lol (Manager), @dominoo90 (Moderator), @gabriel_1975 (Senior Mod), @aiden_from_sbg16 (Moderator)</p>
-
-    <p class="disclaimer">This list may be slightly outdated and will be updated regularly.</p>
+    <div class="staff-card">
+      <h3>Retired Staff</h3>
+      <button onclick="toggleDropdown(this)">View Responsibilities</button>
+      <div class="dropdown-content">
+        <p>@ilovetoast78 — Overseer</p>
+        <p>@ddiana.lol — Manager</p>
+        <p>@dominoo90 — Moderator</p>
+        <p>@gabriel_1975 — Senior Mod</p>
+        <p>@aiden_from_sbg16 — Moderator</p>
+        <p class="disclaimer">This list may be slightly outdated and will be updated regularly.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Discord -->
   <section id="discord">
     <h2>🔗 Discord Server</h2>
-    <a href="https://discord.gg/EnJApsrQKA" target="_blank"><button>Join Darryl’s Club</button></a>
+    <p>Welcome! Press the button below to join our official Discord server. Read the rules, verify your account, and start participating!</p>
+    <a href="https://discord.gg/EnJApsrQKA" target="_blank"><button class="link-btn">Join Darryl’s Club</button></a>
   </section>
 
   <!-- Null’s Club -->
   <section id="nulls">
     <h2>🟦 Null’s Club</h2>
-    <a href="https://link.nulls.gg/nb/invite/band/en?tag=QQ0LUQ998&token=p3n4y9uvzcr" target="_blank"><button>Visit Null’s Club</button></a>
+    <p>Our official Null's club. Click the button below to visit and join the Null’s Club.</p>
+    <a href="https://link.nulls.gg/nb/invite/band/en?tag=QQ0LUQ998&token=p3n4y9uvzcr" target="_blank"><button class="link-btn">Visit Null’s Club</button></a>
   </section>
 
   <!-- Verification -->
   <section id="verification">
     <h2>🔒 Server Verification</h2>
+    <p>If you are new and struggling with verification, fill out the verification form below and submit it to the staff for approval.</p>
     <pre>
 Age:
 How did you find the server?
@@ -128,13 +166,14 @@ Rules confirmed (yes/no):
 Past bans:
 Understanding of moderation:
     </pre>
+    <p>Staff will review your answers to ensure a safe community for everyone.</p>
   </section>
 
   <!-- Credits -->
   <section id="credits">
     <h2>📝 Credits</h2>
-    <p>Website developed by @ilovetoast78 & @ddiana.lol</p>
-    <p>Version 1.2.0</p>
+    <p>Website developed by <strong>@ilovetoast78</strong> & <strong>@ddiana.lol</strong></p>
+    <p>Version 2.1.4</p>
   </section>
 
 </main>
