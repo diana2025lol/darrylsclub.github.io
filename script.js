@@ -1,13 +1,18 @@
-// Remove loading bar after animation ends
+// Loading bar hides after animation
 window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
-    const loader = document.getElementById('loading-bar');
-    if(loader) loader.style.display = 'none';
+    document.getElementById('loading-bar').style.display = 'none';
   }, 1300);
 });
 
-// Section toggle
+// Switch sections
 function showSection(id){
   document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active-section'));
   document.getElementById(id).classList.add('active-section');
+}
+
+// Staff dropdown toggle
+function toggleDropdown(button){
+  const content = button.nextElementSibling;
+  content.style.display = content.style.display === "block" ? "none" : "block";
 }
