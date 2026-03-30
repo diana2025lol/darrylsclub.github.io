@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Darryl’s Club — Version 2.1.0</title>
+<title>Darryl’s Club — Version 1.2.0</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,79 +14,100 @@
   <p>Loading Darryl’s Club...</p>
 </div>
 
-<!-- Sidebar -->
+<!-- Mobile Top Buttons -->
+<div id="mobile-buttons">
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('staff')">Staff</button>
+  <button onclick="showSection('rules')">Rules</button>
+</div>
+
+<!-- Desktop Sidebar -->
 <aside id="sidebar">
   <div class="logo-section">
-    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Brawl_Stars_Darryl.png" alt="Darryl’s Club Logo">
     <h2>Darryl’s Club</h2>
   </div>
   <nav>
     <ul>
       <li onclick="showSection('home')">🏠 Home</li>
-      <li onclick="showSection('staff')">🛡️ Staff Center</li>
-      <li onclick="showSection('rules')">📘 Rules & Safety</li>
-      <li onclick="showSection('help')">📚 Help Center</li>
-      <li onclick="showSection('community')">🎪 Community Hub</li>
-      <li onclick="showSection('events')">🏆 Events Center</li>
-      <li onclick="showSection('stats')">📊 Server Stats</li>
-      <li onclick="showSection('media')">🖼️ Media & Gallery</li>
-      <li onclick="showSection('history')">📜 Server History</li>
-      <li onclick="showSection('links')">🤝 Partners & Links</li>
-      <li onclick="showSection('fun')">🧩 Fun Zone</li>
-      <li onclick="showSection('tech')">⚙️ Technical & Docs</li>
+      <li onclick="showSection('qna')">❓ Q&A</li>
+      <li onclick="showSection('staff')">🛡️ Staff List</li>
+      <li onclick="showSection('discord')">🔗 Discord Server</li>
+      <li onclick="showSection('nulls')">🟦 Null’s Club</li>
+      <li onclick="showSection('verification')">🔒 Server Verification</li>
+      <li onclick="showSection('credits')">📝 Credits</li>
     </ul>
   </nav>
-  <div class="version">v2.1.0</div>
+  <div class="version">v1.2.0</div>
 </aside>
-
-<!-- Mobile Hamburger -->
-<div id="hamburger">☰</div>
-
-<!-- Three Dots Floating Menu -->
-<div id="dot-menu">⋮</div>
-<div id="dot-menu-content">
-  <ul>
-    <li onclick="showSection('home')">🏠 Home</li>
-    <li onclick="showSection('staff')">🛡️ Staff</li>
-    <li onclick="showSection('rules')">📘 Rules</li>
-    <li onclick="showSection('help')">📚 Help</li>
-  </ul>
-</div>
 
 <!-- Main Content -->
 <main id="content">
+
+  <!-- Home -->
   <section id="home" class="active-section">
-    <div class="header-image">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Brawl_Stars_Darryl.png" alt="Darryl from Brawl Stars">
-    </div>
     <h1>Welcome to Darryl’s Club</h1>
     <p>The official hub for the Darryl’s Club community. Use the sidebar to navigate through all sections.</p>
   </section>
 
-  <section id="staff">
-    <h2>🛡️ Staff Center</h2>
-    <div class="staff-list">
-      <div class="staff-card">
-        <h3>Mr.Black <span class="role-owner">(Owner)</span></h3>
-        <div class="dropdown">
-          <button onclick="toggleDropdown(this)">View Responsibilities</button>
-          <div class="dropdown-content">
-            <p>Owner: Final authority and decision-maker.</p>
-          </div>
-        </div>
-      </div>
+  <!-- Q&A -->
+  <section id="qna">
+    <h2>❓ Q&A</h2>
+    <div class="qa">
+      <strong>How to become staff?</strong>
+      <p>Engage with the community, show trustworthiness, and reach out to Higher Staff for consideration.</p>
+    </div>
+    <div class="qa">
+      <strong>What happens if I break a rule?</strong>
+      <p>Warnings, timeouts, or bans depending on the severity of the infraction.</p>
+    </div>
+    <div class="qa">
+      <strong>Can I appeal a ban?</strong>
+      <p>Contact Mr.Black or any staff member you are connected with to submit an appeal.</p>
     </div>
   </section>
 
-  <section id="rules">
-    <h2>📘 Rules & Safety</h2>
-    <div class="rule"><strong>Be respectful & civil</strong><p>We aim for a safe, welcoming space for everyone.</p></div>
-    <div class="rule"><strong>No NSFW/Inappropriate Content</strong><p>Talking or sharing inappropriate content will result in moderation action.</p></div>
-  </section>
+  <!-- Staff List -->
+  <section id="staff">
+    <h2>🛡️ Server Staff</h2>
 
-  <!-- Add other sections similarly -->
-</main>
+    <h3>👑 Higher Staff</h3>
+    <div class="staff-card">
+      <h4>Mr.Black <span class="role">Owner</span></h4>
+      <p>Discord: @mr.black78</p>
+      <p>Server founder, top authority, decision-maker.</p>
+    </div>
+    <div class="staff-card">
+      <h4>Ace <span class="role">Overseer</span></h4>
+      <p>Discord: @aceyywithay</p>
+      <p>Supervises staff operations, handles escalations.</p>
+    </div>
 
-<script src="script.js"></script>
-</body>
-</html>
+    <h3>🔧 Lower Staff</h3>
+    <div class="staff-card">
+      <h4>Jayden <span class="role">Moderator</span></h4>
+      <p>Discord: @aian_jj</p>
+      <p>Enforces rules, manages reports, assists members.</p>
+    </div>
+    <div class="staff-card">
+      <h4>Xye <span class="role">Trial Moderator</span></h4>
+      <p>Discord: @xyeistiredfromthis</p>
+      <p>Moderator in training, supervised evaluation period.</p>
+    </div>
+    <div class="staff-card">
+      <h4>Mark <span class="role">Rule Enforcer</span></h4>
+      <p>Discord: @markymark2810</p>
+      <p>Ensures compliance, monitors activity.</p>
+    </div>
+    <div class="staff-card">
+      <h4>Kal <span class="role">Integration Liaison</span></h4>
+      <p>Discord: @chollima216</p>
+      <p>Handles bot features and integration support.</p>
+    </div>
+
+    <h3>🕊️ Retired Staff</h3>
+    <div class="staff-card">
+      <p>@ilovetoast78 — Overseer</p>
+      <p>@ddiana.lol — Manager</p>
+      <p>@dominoo90 — Moderator</p>
+      <p>@gabriel_1975 — Senior Moderator</p>
+      <p>@aiden_from_sbg16 — Moderator</p>
