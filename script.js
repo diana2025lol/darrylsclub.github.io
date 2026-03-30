@@ -1,18 +1,15 @@
-// Hide loading screen on window load
-window.addEventListener('load', hideLoadingScreen);
-
-// Fail-safe: hide after 3 seconds max
-setTimeout(hideLoadingScreen, 3000);
-
-function hideLoadingScreen() {
+// Show loader for a fixed duration, then hide
+document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById('loading-screen');
-  if (loader) {
+  
+  // Delay in ms (1.2 seconds)
+  setTimeout(() => {
     loader.style.opacity = '0';
     setTimeout(() => {
       loader.style.display = 'none';
-    }, 500); // fade-out
-  }
-}
+    }, 500); // fade out
+  }, 1200);
+});
 
 // Section toggle
 function showSection(id){
