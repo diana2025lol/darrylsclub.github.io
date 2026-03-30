@@ -1,14 +1,10 @@
-// Always hide the loader after 1 second
-setTimeout(() => {
-  const loader = document.getElementById('loading-screen');
-  if (loader) {
-    loader.style.transition = "opacity 0.5s ease";
-    loader.style.opacity = "0";
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500); // fade out
-  }
-}, 1000);
+// Remove loading bar after animation ends
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const loader = document.getElementById('loading-bar');
+    if(loader) loader.style.display = 'none';
+  }, 1300);
+});
 
 // Section toggle
 function showSection(id){
